@@ -23,7 +23,7 @@ class DeviceHandler {
       return [];
     }
     var response = await
-        http.get(Uri.parse('http://demo.buttons.moiseev.org:43421/renter/getDevices?rentID=$index'));
+        http.get(Uri.parse('http://46.229.100.2:45633/renter/getDevices?rentID=$index'));
     var devices = <Device>[];
     for (var dev in jsonDecode(utf8.decode(response.bodyBytes))){
       devices.add(Device.fromJson(dev));
@@ -60,10 +60,10 @@ class ApartmentHandler {
 
   Future<List<Apartment>> getApartmentFromApi(int index) async {
     var response = await http.get(Uri.parse(
-        'http://demo.buttons.moiseev.org:43421/renter/getRents?renterID=$index'));
+        'http://46.229.100.2:45633/renter/getRents?renterID=$index'));
 
     var apartments = <Apartment>[];
-    if(response.statusCode == 200) {
+    if(response.statusCode == 200 || response.statusCode == 202) {
       for (var rent in jsonDecode(utf8.decode(response.bodyBytes))) {
         apartments.add(Apartment.fromJson(rent));
       }

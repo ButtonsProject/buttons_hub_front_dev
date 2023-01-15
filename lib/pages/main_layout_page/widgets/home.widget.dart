@@ -44,7 +44,7 @@ class HomeWidget extends StatelessWidget {
                         fontSize: 20),
                   ),
                 ),
-                for (var apartment in snapshot.data! as List<Apartment>)
+                for (var apartment in snapshot.data as List<Apartment>)
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 7.5),
                     child: GestureDetector(

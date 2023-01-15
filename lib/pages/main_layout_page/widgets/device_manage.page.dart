@@ -34,7 +34,7 @@ class _DeviceManagePageState extends State<DeviceManagePage> {
                       _isActivated = value;
                       command = value ? 'ON' : 'OFF';
                       http.post(
-                        Uri.parse('http://demo.buttons.moiseev.org:43421/renter/sendCommand'),
+                        Uri.parse('http://46.229.100.2:45633/renter/sendCommand'),
                         headers: <String, String>{
                           'Content-Type': 'application/json; charset=UTF-8',
                         },
@@ -59,7 +59,7 @@ class _DeviceManagePageState extends State<DeviceManagePage> {
                           _brightness = value;
                           command = (value * 100).ceil().toString();
                           http.post(
-                              Uri.parse('http://demo.buttons.moiseev.org:43421/renter/sendCommand'),
+                              Uri.parse('http://46.229.100.2:45633/renter/sendCommand'),
                               headers: <String, String>{
                                 'Content-Type': 'application/json; charset=UTF-8',
                               },
@@ -90,7 +90,7 @@ class _DeviceManagePageState extends State<DeviceManagePage> {
                             command =
                                 '${hsvColor.hue.ceil()},${(hsvColor.saturation*100).ceil()},${(hsvColor.value*100).ceil()}';
                             http.post(
-                                Uri.parse('http://demo.buttons.moiseev.org:43421/renter/sendCommand'),
+                                Uri.parse('http://46.229.100.2:45633/renter/sendCommand'),
                                 headers: <String, String>{
                                   'Content-Type': 'application/json; charset=UTF-8',
                                 },
@@ -117,7 +117,7 @@ class _DeviceManagePageState extends State<DeviceManagePage> {
                         _brightness = value;
                         command = (value * 100).ceil().toString();
                         http.post(
-                            Uri.parse('http://demo.buttons.moiseev.org:43421/renter/sendCommand'),
+                            Uri.parse('http://46.229.100.2:45633/renter/sendCommand'),
                             headers: <String, String>{
                               'Content-Type': 'application/json; charset=UTF-8',
                             },
@@ -142,7 +142,7 @@ class _DeviceManagePageState extends State<DeviceManagePage> {
                         command =
                         '${hsvColor.hue.ceil()},${(hsvColor.saturation*100).ceil()},${(hsvColor.value*100).ceil()}';
                         http.post(
-                            Uri.parse('http://demo.buttons.moiseev.org:43421/renter/sendCommand'),
+                            Uri.parse('http://46.229.100.2:45633/renter/sendCommand'),
                             headers: <String, String>{
                               'Content-Type': 'application/json; charset=UTF-8',
                             },
